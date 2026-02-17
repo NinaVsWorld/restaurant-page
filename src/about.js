@@ -1,5 +1,3 @@
-export { createItem, createPara }
-
 export function aboutTab() {
     const container = document.createElement("div");
     container.classList.add("container");
@@ -22,9 +20,14 @@ export function aboutTab() {
     // Things I'm currently doing
     const currentlySection = document.createElement("div");
     currentlySection.classList.add("currently");
-    const currently = document.createElement("p");
-    currently.textContent = "Currently:"
+    const currently = createPara("Currently:");
     const currentlyList = document.createElement("ul");
+    const currentItem1 = createItem("Expanding my skills in JavaScript and web development");
+    currentlyList.appendChild(currentItem1);
+    currentlySection.appendChild(currently);
+    currentlySection.appendChild(currentlyList);
+
+    return container;
 }
 
 const createItem = (text) => {
@@ -38,3 +41,5 @@ const createPara = (text) => {
     p.textContent = text;
     return p;
 }
+
+export { createItem, createPara }

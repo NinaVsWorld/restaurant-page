@@ -1,5 +1,5 @@
 import meImg from "./images/pfp.jpeg";
-import { createItem, createPara } from "./about.js";
+import { createPara } from "./about.js";
 
 export function homeTab() {
     const container = document.createElement("div");
@@ -22,7 +22,6 @@ export function homeTab() {
     const img = document.createElement("img");
     img.src = meImg;
     img.alt = "a placeholder img";
-    headshot.appendChild(img);
 
     container.appendChild(textBody);
     container.appendChild(img);

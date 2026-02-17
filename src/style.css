@@ -23,6 +23,7 @@ body {
     width: 65%;
 }
 
+/* Nav bar */
 nav {
     display: flex;
     align-items: center;
@@ -42,6 +43,12 @@ button {
     background-color: var(--background-colour);
     color: var(--link-colour);
     border: none;
+    font-weight: 600;
+}
+
+button:hover {
+    color: var(--border-colour);
+    cursor: pointer;
 }
 
 .tabs {
@@ -51,4 +58,34 @@ button {
 
 .tabs button {
     font-size: 1.2rem;
+}
+
+/* Contacts */
+.contacts {
+    padding: 1em;
+    color: var(--primary-text-colour);
+}
+
+.contacts ul {
+    padding-top: 1em;
+    list-style: none;
+    color: var(--link-colour);
+}
+
+.contacts li {
+    padding-bottom: 0.5em;
+}
+
+a, a:visited {
+    display: flex;
+    gap: 10px;
+    color: var(--link-colour);
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+div svg {
+    width: 1.4rem;
+    height: 1.4rem;
+    fill: var(--link-colour);
 }

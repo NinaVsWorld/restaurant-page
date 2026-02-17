@@ -7,7 +7,6 @@ body {
     --background-colour: #012a36;
     --primary-text-colour: #F8E9F1;
     --link-colour: #d295bf;
-    --secondary-text-colour: #A0A0A0;
     --border-colour: #e6bccd;
 
     display: flex;
@@ -26,6 +25,8 @@ body {
 /* Nav bar */
 nav {
     display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
     align-items: center;
     padding: 1em;
 }
@@ -53,6 +54,7 @@ button:hover {
 
 .tabs {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
 }
 
@@ -61,9 +63,11 @@ button:hover {
 }
 
 /* Contacts */
-.contacts {
+.contacts,
+.about-container {
     padding: 1em;
     color: var(--primary-text-colour);
+    font-size: 1.1rem;
 }
 
 .contacts ul {
@@ -81,11 +85,28 @@ a, a:visited {
     gap: 10px;
     color: var(--link-colour);
     text-decoration: none;
-    font-size: 1.1rem;
 }
 
 div svg {
     width: 1.4rem;
     height: 1.4rem;
     fill: var(--link-colour);
+}
+
+/* About Me */
+.inner-container {
+    padding-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.likes ul li,
+.currently ul li {
+    margin-left: 30px;
+    margin-bottom: 0.25em;
+}
+
+ul {
+    padding-top: 0.5em;
 }

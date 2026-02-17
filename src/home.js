@@ -18,15 +18,13 @@ export function homeTab() {
     textBody.appendChild(introBody);
 
     // Box 2
-    const headshot = document.createElement("div");
-    headshot.classList.add("headshot");
     const img = document.createElement("img");
     img.src = meImg;
     img.alt = "a placeholder img";
     headshot.appendChild(img);
 
     container.appendChild(textBody);
-    container.appendChild(headshot);
+    container.appendChild(img);
     
     return container;
 }

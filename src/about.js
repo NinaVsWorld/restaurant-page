@@ -27,6 +27,10 @@ export function aboutTab() {
     currentlySection.appendChild(currently);
     currentlySection.appendChild(currentlyList);
 
+    container.appendChild(aboutMe);
+    container.appendChild(bio);
+    container.appendChild(likesSection);
+    container.appendChild(currentlySection);
     return container;
 }
 

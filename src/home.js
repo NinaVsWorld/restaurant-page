@@ -1,4 +1,5 @@
 import meImg from "./images/pfp.jpeg";
+import { createItem, createPara } from "./about.js";
 
 export function homeTab() {
     const container = document.createElement("div");
@@ -8,11 +9,11 @@ export function homeTab() {
     const textBody = document.createElement("div");
     textBody.classList.add("text-body");
 
-    const heading = document.createElement("p");
-    heading.textContent = "Hi, I'm Nina";
+    const heading = createPara("Hi, I'm Nina");
+    //heading.textContent = "Hi, I'm Nina";
 
-    const introBody = document.createElement("p");
-    introBody.textContent = "blah blah blah";
+    const introBody = createPara("blah blah blah");
+    //introBody.textContent = "blah blah blah";
 
     textBody.appendChild(heading);
     textBody.appendChild(introBody);

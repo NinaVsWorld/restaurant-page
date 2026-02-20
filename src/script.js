@@ -1,5 +1,7 @@
 import "./style.css";
 import { initialLoad, content } from "./load.js";
+import { menuTab } from "./menu.js";
+import { contactTab } from "./contact.js";
 
 const body = document.querySelector("body");
 initialLoad();
@@ -10,16 +12,12 @@ body.addEventListener("click", (e) => {
         content.textContent = '';
         initialLoad();
     }
-    if (e.target.classList.contains("about")) {
+    if (e.target.classList.contains("menu")) {
         content.textContent = '';
-        //content.appendChild(aboutTab());
-    }
-    if (e.target.classList.contains("projects")) {
-        content.textContent = '';
-        //content.appendChild(projectsTab());
+        content.appendChild(menuTab());
     }
     if (e.target.classList.contains("contact")) {
         content.textContent = '';
-        //content.appendChild(contactTab());
+        content.appendChild(contactTab());
     }
 })

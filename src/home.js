@@ -2,6 +2,15 @@ export function homeTab() {
     // Container for cards
     const container = document.createElement("div");
     container.classList.add("container");
+    const restaurantName = document.createElement("div");
+    restaurantName.classList.add("heading-container");
+    const headingTextCard = document.createElement("div");
+    headingTextCard.classList.add("heading-text-card");
+    const heading = document.createElement("h1");
+    heading.textContent = "Fire Horse restaurant";
+
+    headingTextCard.append(heading);
+    restaurantName.append(headingTextCard);
 
     // Testimonial, hours, location card
     const card1 = document.createElement("div");
@@ -27,31 +36,25 @@ export function homeTab() {
     const customer = document.createElement("p");
     customer.textContent = "- Fire Horse";
 
-    textCard1.appendChild(review);
-    textCard1.appendChild(customer);
-    card1.appendChild(textCard1);
+    textCard1.append(review, customer);
+    card1.append(textCard1);
 
     // Hours - add more later
     const hoursHeading = document.createElement("h3");
     const hours = document.createElement("ul");
-    hours.appendChild(createListItem("Sunday: 12pm - 11pm"));
-    hours.appendChild(createListItem("Monday: 12pm - 11pm"));
+    hours.append(createListItem("Sunday: 12pm - 11pm"), createListItem("Monday: 12pm - 11pm"));
 
-    textCard2.appendChild(hoursHeading);
-    textCard2.appendChild(hours);
-    card2.appendChild(textCard2);
+    textCard2.append(hoursHeading, hours);
+    card2.append(textCard2);
 
     // Location
     const addressHeading = document.createElement("h3");
     const address = document.createElement("address");
 
-    textCard3.appendChild(addressHeading);
-    textCard3.appendChild(address);
-    card3.appendChild(textCard3);
+    textCard3.append(addressHeading, address);
+    card3.append(textCard3);
 
-    container.appendChild(card1);
-    container.appendChild(card2);
-    container.appendChild(card3);
+    container.append(restaurantName, card1, card2, card3);
     return container;
 }
 

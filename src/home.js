@@ -7,7 +7,7 @@ export function homeTab() {
     const headingTextCard = document.createElement("div");
     headingTextCard.classList.add("heading-text-card");
     const heading = document.createElement("h1");
-    heading.textContent = "Fire Horse restaurant";
+    heading.textContent = "Fire Horse Restaurant";
 
     headingTextCard.append(heading);
     restaurantName.append(headingTextCard);
@@ -41,15 +41,21 @@ export function homeTab() {
 
     // Hours - add more later
     const hoursHeading = document.createElement("h3");
+    hoursHeading.textContent = "Hours";
     const hours = document.createElement("ul");
-    hours.append(createListItem("Sunday: 12pm - 11pm"), createListItem("Monday: 12pm - 11pm"));
+    hours.append(createListItem("Sunday: 12pm - 10pm"), createListItem("Monday: 12pm - 10pm"),
+                createListItem("Tuesday: Closed"), createListItem("Wednesday: 12pm - 10pm"),
+                createListItem("Thursday: 12pm - 10pm"), createListItem("Friday: 12pm - 11pm"),
+                createListItem("Saturday: 12pm - 11pm"));
 
     textCard2.append(hoursHeading, hours);
     card2.append(textCard2);
 
     // Location
     const addressHeading = document.createElement("h3");
+    addressHeading.textContent = "Address";
     const address = document.createElement("address");
+    address.textContent = "24 Dragon Road, Tigerville";
 
     textCard3.append(addressHeading, address);
     card3.append(textCard3);

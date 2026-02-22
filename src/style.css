@@ -2,3 +2,113 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    background: radial-gradient(
+        circle at center,
+        #a82323 0%,
+        #9e1b1b 60%,
+        #8b0000 100%
+    ), 
+    radial-gradient(circle at center, #a82323, #7f0000);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #3A1E1E;
+    font-family: "Noto Serif SC", serif;
+
+    --card-colour: #F6E3B4;
+    --outer-card-colour: #C9A227;
+}
+
+#content {
+    display: flex;
+    justify-content: center;
+    width: 700px;
+    background-color: var(--card-colour);
+    padding: 2em;
+    border-radius: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3em;
+}
+
+.heading-container {
+    background-color: var(--outer-card-colour);
+    padding: 0.6em;
+    clip-path: polygon(0 33.3%, 5% 0, 95% 0, 100% 33.3%, 100% 66.6%, 95% 100%, 5% 100%, 0 66.6%);
+}
+
+.heading-text-card {
+    background-color: var(--card-colour);
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    clip-path: polygon(0 33.3%, 5% 0, 95% 0, 100% 33.3%, 100% 66.6%, 95% 100%, 5% 100%, 0 66.6%);
+}
+
+.testimonial,
+.text-card,
+.hours,
+.hours-text,
+.location,
+.location-text {
+    clip-path: polygon(0 20%, 10% 0, 90% 0, 100% 20%, 100% 80%, 90% 100%, 10% 100%, 0 80%);
+}
+
+.testimonial,
+.location {
+    background-color: var(--outer-card-colour);
+    padding: 0.6em;
+    width: 80%;
+}
+
+.text-card,
+.location-text {
+    background-color: var(--card-colour);
+    padding: 2em;
+}
+
+.text-card .review {
+    margin-bottom: 1em;
+}
+
+.text-card p:nth-child(2) {
+    margin-left: 20px;
+}
+
+.hours-text h3,
+.hours-text ul {
+    text-align: center;
+    list-style: none;
+}
+
+.hours-text h3 {
+    margin-bottom: 10px;
+}
+
+.hours-text li {
+    margin-top: 5px;
+}
+
+.hours {
+    background-color: var(--outer-card-colour);
+    padding: 0.6em;
+}
+
+.hours-text {
+    padding: 1.5em;
+    background-color: var(--card-colour);
+}
+
+.location-text {
+    text-align: center;
+}
+
+.location {
+    width: 60%;
+}
